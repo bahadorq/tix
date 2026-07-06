@@ -1,0 +1,41 @@
+{
+  "entities": {
+    "Ticket": {
+      "title": "Ticket",
+      "description": "Represents an admission ticket for an event",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The unique reference code of the ticket"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the guest"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["valid", "checked-in", "cancelled"],
+          "description": "The current entry status of the ticket"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The ISO timestamp when the ticket was issued"
+        },
+        "checkedInAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The ISO timestamp when the guest checked in"
+        }
+      },
+      "required": ["id", "name", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "tickets/{ticketId}": {
+      "schema": "Ticket",
+      "description": "Collection of admission tickets"
+    }
+  }
+}

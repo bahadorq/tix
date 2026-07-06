@@ -1,0 +1,10 @@
+{
+  "name": "Sanati Events",
+  "description": "A dynamic custom event management and live QR ticket gate admissions system for Sanati Events.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
